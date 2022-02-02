@@ -5,6 +5,13 @@ fun main(args: Array<String>) {
   //Leccion 2
   //tiposDeDatos()
 
+  //Leccion 3
+  //sentenciaIf()
+
+  //Leccion 4
+  sentenciaWhen()
+
+
 }
 /*Variables y constantes
 */
@@ -31,8 +38,6 @@ private fun variblesYConstantes(){
   println("\n"+myFirstConstant)
   
 }
-
-
 /*Tipo de datos (data types)*/
 private fun tiposDeDatos(){
   //String
@@ -65,3 +70,69 @@ private fun tiposDeDatos(){
 
 
 }
+
+/*Sentencia If*/
+private fun sentenciaIf(){
+
+  val myNumber = 91
+  //Operadores concionales
+  // > mayor que
+  // < menor que
+  // >= mayor o igual que
+  // <= menor o igual que
+  // == igual
+  // != desigualdad
+
+  // Operadores Logicos
+  // && operador "y"
+  // || operador "o"
+  // ! operador "no"
+
+  if((myNumber <= 10 && myNumber > 5) || (myNumber == 53)){
+    println("$myNumber es menor que 10")
+
+  }else if(!(myNumber > 90)){
+    //Sentencia else if
+    println("$myNumber es diferente  a 90")
+    
+  }
+   else if(myNumber != 100){
+    //Sentencia else if
+    println("$myNumber es diferente a  100")
+    
+  }else{
+    //Sentencia else
+    println("$myNumber es mayor que 10 o igual o menor a 5 y no es igual a 53")
+  }
+  
+
+
+}
+
+/*sentencia When*/
+private fun sentenciaWhen(){
+  val country = "FRAcia"
+
+  when(country){
+
+    "España","Mexico","Peru","Colombia" ->{
+      println("El idioma es español")
+    }"EEUU" ->{
+      println("El idioma es ingles")
+    }"Francia" ->{
+      println("El idioma es frances")
+    } else->{
+      println("No conecemos el idioma")
+    }
+
+
+  }
+
+
+}
+
+
+
+
+
+
