@@ -9,7 +9,10 @@ fun main(args: Array<String>) {
   //sentenciaIf()
 
   //Leccion 4
-  sentenciaWhen()
+  //sentenciaWhen()
+
+  //Leccion 5
+  arrays()
 
 
 }
@@ -111,8 +114,8 @@ private fun sentenciaIf(){
 
 /*sentencia When*/
 private fun sentenciaWhen(){
-  val country = "FRAcia"
-
+  val country = "Francia"
+  //When coin String
   when(country){
 
     "España","Mexico","Peru","Colombia" ->{
@@ -127,10 +130,87 @@ private fun sentenciaWhen(){
 
 
   }
+  //When con Int 
+  val age = 101
+
+  when(age){
+    0,1,2-> {
+      println("Eres un bebé")
+    }in 3..10 ->{
+      println("Eres un niño")
+    }in 11..17->{
+      println("Eres un adolescente")
+    }in 18..69->{
+      println("Eres  adulto")
+    }in 70..99->{
+      println("Eres anciano")
+    }else->{
+      println("OMG")
+    }
+  }
+
+
 
 
 }
 
+/*array o arreglos*/
+private fun arrays(){
+  val name = "Lalo"
+  val surname ="007"
+  val company ="SDP"
+  val age = "39"
+
+  //Creacion del un Array
+
+  val myArray = arrayListOf<String>()
+
+
+ //Agregar elementos al array
+  myArray.add(name)
+  myArray.add(surname)
+  myArray.add(company)
+  myArray.add(age)
+ //myArray.add(age)
+ //myArray.add(age)
+
+ //Añadir un conjunto de datos
+ myArray.addAll(listOf("Hola","Bienvenidos al tuto", "De kotlin", "Esto es un elemento del Array"))
+ println(myArray)
+
+ //Acceso a datos
+ val myCompany = myArray[2]
+ println(myCompany)
+
+ //Modificacion de datos
+ myArray[7] = "Esto es un elemento del array modificado"
+ println(myArray)
+
+ //Eliminar datos
+ myArray.removeAt(7)
+ println(myArray)
+
+ //Recorrer los elementos de array
+ myArray.forEach{
+   println(it)
+ }
+
+ //otras operaciones
+println(myArray.first()) //Acceder al primer elemento del array
+println(myArray.last()) //Acceder al ultimo elemento del array
+
+ println(myArray.count()) //contar los datos en el array
+
+ myArray.clear() //limpiar el array, es decir, dejarlo vacio
+
+ println(myArray.count())
+
+
+
+  
+
+
+}
 
 
 
