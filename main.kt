@@ -12,7 +12,13 @@ fun main(args: Array<String>) {
   //sentenciaWhen()
 
   //Leccion 5
-  arrays()
+  //arrays()
+
+  //Leccion 6
+  // maps()
+
+  //Leccion 7
+  loops()
 
 
 }
@@ -213,6 +219,97 @@ println(myArray.last()) //Acceder al ultimo elemento del array
 }
 
 
+/*Aqui vamos a hablar de maps*/
+private fun maps(){
+  //Sintaxis 
+  var myMap: Map<String,Int> =mapOf()
+  println(myMap)
 
+  //Añadir elementos
+  myMap = mutableMapOf("Brais" to 1, "Pedro" to 10, "Juan" to 3)
+  println(myMap)
+
+
+
+  //añadir un solo valor
+  myMap["lalo"]=9
+  myMap.put("Edu",2)
+  println(myMap)
+
+ //Actualizar un dato
+  myMap.put("Brais",3)
+  myMap.put("Edu",3)
+  println(myMap)
+
+  //Aceso a un dato
+  println(myMap["Edu"]) //Tenemos que escribir la clave
+
+  //eliminar un dato
+  myMap.remove("Pedro")
+  println(myMap)
+
+
+
+
+}
+
+
+/*Aqui vamos a hablar de loops, tambien llamados bucles*/
+private fun loops(){
+  var myArray: List<String> = listOf("Uno","dos","tres")
+  var myMap: MutableMap<String,Int> = mutableMapOf("Brais" to 10,"Edu" to 2,"lalo" to 3, "lulu " to 6)
+
+
+  //for
+  
+  for(myString in myArray){ 
+    println(myString)//Imprimiendo todos los elementos del Array
+  }
+  for(myBook in myMap){
+    println(myBook)//Imprimiendo todos los elementos del mapa
+    println("${myBook.key} - ${myBook.value} ")
+  }
+  for(x in 0..10){
+    println(x)
+  }
+  for(x in 9 until 20){
+    println(x)
+  }
+
+  for(x in 1..20 step 10){
+    println(x)
+  }
+
+  for(x in 20 downTo 0 step 3){
+    println(x)
+  }
+  val myNumberArray =(1..10)
+  for(myArray in myNumberArray){
+    println(myArray)
+  }
+  
+  //while
+  var x = 0
+
+  while(x <= 10){
+    println("$x es menor o igual a 10")
+    x += 2
+  }
+
+  //do while
+
+  x = 0
+
+  do{
+    println("$x es menor a 10")
+    x++
+
+  }while(x < 10)
+
+  
+
+
+
+}
 
 
